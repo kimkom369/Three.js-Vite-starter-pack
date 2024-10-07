@@ -65,10 +65,9 @@ export default class Experience {
         ),
       },
     });
-    const material = new THREE.MeshBasicMaterial({ color: "red" });
 
     this.points = new THREE.Points(this.geometry, this.material);
-    this.points.position.z = -3;
+    this.controls.target.set(this.points.position.x, this.points.position.y, this.points.position.z);
 
     this.scene.add(this.points);
   }
